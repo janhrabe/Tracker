@@ -1,0 +1,87 @@
+2025-02-28 15:46:02.848 +01:00 [INF] Registered 5 endpoints in 612 milliseconds.
+2025-02-28 15:46:03.391 +01:00 [INF] Now listening on: https://localhost:57679
+2025-02-28 15:46:03.397 +01:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-02-28 15:46:03.478 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-28 15:46:03.479 +01:00 [INF] Hosting environment: Development
+2025-02-28 15:46:03.480 +01:00 [INF] Content root path: C:\Users\jan.hrabe1\source\repos\jh-random-repo\ActivityTracker\ActivityTracker\src\ActivityTracker.Web
+2025-02-28 15:46:03.489 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-28 15:46:03.491 +01:00 [INF] Hosting environment: Development
+2025-02-28 15:46:03.492 +01:00 [INF] Content root path: C:\Users\jan.hrabe1\source\repos\jh-random-repo\ActivityTracker\ActivityTracker\src\ActivityTracker.Web
+2025-02-28 15:46:03.545 +01:00 [ERR] Hosting failed to start
+System.InvalidOperationException: Server has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__14_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2025-02-28 15:52:29.046 +01:00 [INF] Registered 5 endpoints in 469 milliseconds.
+2025-02-28 15:52:29.560 +01:00 [INF] Now listening on: https://localhost:57679
+2025-02-28 15:52:29.569 +01:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-02-28 15:52:29.679 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-28 15:52:29.680 +01:00 [INF] Hosting environment: Development
+2025-02-28 15:52:29.681 +01:00 [INF] Content root path: C:\Users\jan.hrabe1\source\repos\jh-random-repo\ActivityTracker\ActivityTracker\src\ActivityTracker.Web
+2025-02-28 15:52:40.445 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/ - null null
+2025-02-28 15:52:40.674 +01:00 [INF] Executing endpoint 'HTTP: GET /'
+2025-02-28 15:52:40.709 +01:00 [INF] Handling ListUserQuery
+2025-02-28 15:52:40.710 +01:00 [INF] Property Skip : null
+2025-02-28 15:52:40.711 +01:00 [INF] Property Take : null
+2025-02-28 15:52:41.789 +01:00 [ERR] Failed executing DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."FullName", "u"."ProfilePhotoUrl", "u"."UserId"
+FROM "Users" AS "u"
+2025-02-28 15:52:41.815 +01:00 [ERR] An exception occurred while iterating over the results of a query for context type 'ActivityTracker.Infrastructure.Data.AppDbContext'.
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: Users'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: Users'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2025-02-28 16:08:08.572 +01:00 [INF] Registered 5 endpoints in 545 milliseconds.
+2025-02-28 16:08:09.083 +01:00 [INF] Now listening on: https://localhost:57679
+2025-02-28 16:08:09.089 +01:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-02-28 16:08:09.185 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-28 16:08:09.186 +01:00 [INF] Hosting environment: Development
+2025-02-28 16:08:09.186 +01:00 [INF] Content root path: C:\Users\jan.hrabe1\source\repos\jh-random-repo\ActivityTracker\ActivityTracker\src\ActivityTracker.Web
+2025-02-28 16:08:16.437 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/ - null null
+2025-02-28 16:08:16.627 +01:00 [INF] Executing endpoint 'HTTP: GET /'
+2025-02-28 16:08:16.663 +01:00 [INF] Handling ListUserQuery
+2025-02-28 16:08:16.665 +01:00 [INF] Property Skip : null
+2025-02-28 16:08:16.666 +01:00 [INF] Property Take : null
+2025-02-28 16:09:48.257 +01:00 [INF] Registered 5 endpoints in 625 milliseconds.
+2025-02-28 16:09:48.713 +01:00 [INF] Now listening on: https://localhost:57679
+2025-02-28 16:09:48.720 +01:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-02-28 16:09:48.812 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-28 16:09:48.813 +01:00 [INF] Hosting environment: Development
+2025-02-28 16:09:48.814 +01:00 [INF] Content root path: C:\Users\jan.hrabe1\source\repos\jh-random-repo\ActivityTracker\ActivityTracker\src\ActivityTracker.Web
+2025-02-28 16:10:04.041 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/ - null null
+2025-02-28 16:10:04.230 +01:00 [INF] Executing endpoint 'HTTP: GET /'
+2025-02-28 16:10:04.264 +01:00 [INF] Handling ListUserQuery
+2025-02-28 16:10:04.265 +01:00 [INF] Property Skip : null
+2025-02-28 16:10:04.266 +01:00 [INF] Property Take : null
+2025-02-28 16:12:51.311 +01:00 [INF] Registered 5 endpoints in 681 milliseconds.
+2025-02-28 16:12:51.919 +01:00 [INF] Now listening on: https://localhost:57679
+2025-02-28 16:12:51.925 +01:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-02-28 16:12:52.004 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-28 16:12:52.005 +01:00 [INF] Hosting environment: Development
+2025-02-28 16:12:52.006 +01:00 [INF] Content root path: C:\Users\jan.hrabe1\source\repos\jh-random-repo\ActivityTracker\ActivityTracker\src\ActivityTracker.Web
+2025-02-28 16:13:00.602 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/ - null null
+2025-02-28 16:13:00.807 +01:00 [INF] Executing endpoint 'HTTP: GET /'
+2025-02-28 16:13:00.850 +01:00 [INF] Handling ListUserQuery
+2025-02-28 16:13:00.851 +01:00 [INF] Property Skip : null
+2025-02-28 16:13:00.852 +01:00 [INF] Property Take : null

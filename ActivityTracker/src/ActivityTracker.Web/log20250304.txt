@@ -1,0 +1,690 @@
+2025-03-04 08:49:33.416 +01:00 [INF] Registered 5 endpoints in 680 milliseconds.
+2025-03-04 08:49:33.990 +01:00 [INF] Now listening on: https://localhost:57679
+2025-03-04 08:49:34.004 +01:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-03-04 08:49:34.862 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-04 08:49:34.863 +01:00 [INF] Hosting environment: Development
+2025-03-04 08:49:34.864 +01:00 [INF] Content root path: C:\Users\jan.hrabe1\source\repos\jh-random-repo\ActivityTracker\ActivityTracker\src\ActivityTracker.Web
+2025-03-04 08:49:37.340 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/ - null null
+2025-03-04 08:49:37.526 +01:00 [INF] Executing endpoint 'HTTP: GET /'
+2025-03-04 08:49:37.561 +01:00 [INF] Handling ListUserQuery
+2025-03-04 08:49:37.563 +01:00 [INF] Property Skip : null
+2025-03-04 08:49:37.565 +01:00 [INF] Property Take : null
+2025-03-04 08:49:40.211 +01:00 [INF] Executed DbCommand (33ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[FullName], [u].[ProfilePhotoUrl]
+FROM [Users] AS [u]
+2025-03-04 08:49:40.237 +01:00 [INF] Handled ListUserQuery with Ardalis.Result.Result`1[System.Collections.Generic.List`1[ActivityTracker.UseCases.Contributors.UserDTO]] in 2669 ms
+2025-03-04 08:49:40.255 +01:00 [INF] Executed endpoint 'HTTP: GET /'
+2025-03-04 08:49:40.274 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/ - 200 null application/json; charset=utf-8 2945.158ms
+2025-03-04 08:49:40.300 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/favicon.ico - null null
+2025-03-04 08:49:40.307 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/favicon.ico - 404 0 null 7.3467ms
+2025-03-04 08:49:40.312 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:57679/favicon.ico, Response status code: 404
+2025-03-04 08:49:46.685 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/swagger - null null
+2025-03-04 08:49:46.698 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/swagger - 302 0 null 12.9845ms
+2025-03-04 08:49:46.705 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/swagger/index.html - null null
+2025-03-04 08:49:46.730 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/swagger/index.html - 200 null text/html; charset=utf-8 24.8034ms
+2025-03-04 08:49:46.741 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-04 08:49:46.756 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/_vs/browserLink - null null
+2025-03-04 08:49:46.765 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/_framework/aspnetcore-browser-refresh.js - 200 13790 application/javascript; charset=utf-8 23.9118ms
+2025-03-04 08:49:46.807 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/_vs/browserLink - 200 null text/javascript; charset=UTF-8 50.6193ms
+2025-03-04 08:49:46.839 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/swagger/v1/swagger.json - null null
+2025-03-04 08:49:46.910 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/swagger/v1/swagger.json - 200 null application/json; charset=utf-8 71.2015ms
+2025-03-04 08:50:22.894 +01:00 [INF] Request starting HTTP/2 POST https://localhost:57679/Users - application/json 63
+2025-03-04 08:50:22.897 +01:00 [INF] Executing endpoint 'HTTP: POST /Users'
+2025-03-04 08:50:22.942 +01:00 [INF] Handling CreateUserCommand
+2025-03-04 08:50:22.944 +01:00 [INF] Property FullName : User Name
+2025-03-04 08:50:22.945 +01:00 [INF] Property ProfilePhotoUrl : path.jpeg
+2025-03-04 08:50:23.129 +01:00 [INF] Executed DbCommand (29ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 25), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Id], [FullName], [ProfilePhotoUrl])
+VALUES (@p0, @p1, @p2);
+2025-03-04 08:50:23.139 +01:00 [INF] Handled CreateUserCommand with Ardalis.Result.Result`1[System.Guid] in 192 ms
+2025-03-04 08:50:23.146 +01:00 [INF] Executed endpoint 'HTTP: POST /Users'
+2025-03-04 08:50:23.147 +01:00 [INF] Request finished HTTP/2 POST https://localhost:57679/Users - 200 null application/json; charset=utf-8 252.9488ms
+2025-03-04 08:50:44.402 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/Contributors/{UserId} - null null
+2025-03-04 08:50:44.406 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/Contributors/{UserId} - 404 0 null 5.7951ms
+2025-03-04 08:50:44.414 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:57679/Contributors/%7BUserId%7D, Response status code: 404
+2025-03-04 08:53:35.314 +01:00 [INF] Registered 5 endpoints in 173 milliseconds.
+2025-03-04 08:53:35.478 +01:00 [INF] Now listening on: https://localhost:57679
+2025-03-04 08:53:35.483 +01:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-03-04 08:53:35.525 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-04 08:53:35.526 +01:00 [INF] Hosting environment: Development
+2025-03-04 08:53:35.527 +01:00 [INF] Content root path: C:\Users\jan.hrabe1\source\repos\jh-random-repo\ActivityTracker\ActivityTracker\src\ActivityTracker.Web
+2025-03-04 08:53:35.984 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/swagger/index.html - null null
+2025-03-04 08:53:36.091 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/swagger/index.html - 200 null text/html; charset=utf-8 108.5852ms
+2025-03-04 08:53:36.099 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-04 08:53:36.101 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/_vs/browserLink - null null
+2025-03-04 08:53:36.106 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/_framework/aspnetcore-browser-refresh.js - 200 13790 application/javascript; charset=utf-8 6.9797ms
+2025-03-04 08:53:36.128 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/_vs/browserLink - 200 null text/javascript; charset=UTF-8 26.6978ms
+2025-03-04 08:53:36.183 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/swagger/v1/swagger.json - null null
+2025-03-04 08:53:36.208 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/swagger/v1/swagger.json - 200 null application/json; charset=utf-8 25.2717ms
+2025-03-04 08:53:38.748 +01:00 [INF] Registered 5 endpoints in 433 milliseconds.
+2025-03-04 08:53:39.082 +01:00 [INF] Now listening on: https://localhost:57679
+2025-03-04 08:53:39.089 +01:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-03-04 08:53:39.156 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-04 08:53:39.157 +01:00 [INF] Hosting environment: Development
+2025-03-04 08:53:39.157 +01:00 [INF] Content root path: C:\Users\jan.hrabe1\source\repos\jh-random-repo\ActivityTracker\ActivityTracker\src\ActivityTracker.Web
+2025-03-04 08:53:53.293 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/swagger/index.html - null null
+2025-03-04 08:53:53.471 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/swagger/index.html - 200 null text/html; charset=utf-8 182.6964ms
+2025-03-04 08:53:53.497 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-04 08:53:53.497 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/_vs/browserLink - null null
+2025-03-04 08:53:53.510 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/_framework/aspnetcore-browser-refresh.js - 200 13790 application/javascript; charset=utf-8 13.6992ms
+2025-03-04 08:53:53.535 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/_vs/browserLink - 200 null text/javascript; charset=UTF-8 38.2275ms
+2025-03-04 08:53:53.558 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/swagger/v1/swagger.json - null null
+2025-03-04 08:53:53.598 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/swagger/v1/swagger.json - 200 null application/json; charset=utf-8 40.1147ms
+2025-03-04 08:54:02.687 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/Users/{UserId} - null null
+2025-03-04 08:54:02.691 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/Users/{UserId} - 404 0 null 4.58ms
+2025-03-04 08:54:02.697 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:57679/Users/%7BUserId%7D, Response status code: 404
+2025-03-04 08:54:27.444 +01:00 [INF] Request starting HTTP/2 PUT https://localhost:57679/Users/f3134c9d-1a7b-4e48-9bbb-08dd5af13806 - application/json 57
+2025-03-04 08:54:27.450 +01:00 [INF] Executing endpoint 'HTTP: PUT /Users/{UserId:Guid}'
+2025-03-04 08:54:27.510 +01:00 [INF] Handling UpdateUserCommand
+2025-03-04 08:54:27.511 +01:00 [INF] Property UserId : "f3134c9d-1a7b-4e48-9bbb-08dd5af13806"
+2025-03-04 08:54:27.513 +01:00 [INF] Property NewName : string
+2025-03-04 08:54:27.514 +01:00 [INF] Property NewProfilePictureUrl : string
+2025-03-04 08:54:28.684 +01:00 [INF] Executed DbCommand (40ms) [Parameters=[@__p_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[FullName], [u].[ProfilePhotoUrl]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__p_0
+2025-03-04 08:54:28.811 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[@p2='?' (DbType = Guid), @p0='?' (Size = 25), @p1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [FullName] = @p0, [ProfilePhotoUrl] = @p1
+OUTPUT 1
+WHERE [Id] = @p2;
+2025-03-04 08:54:28.828 +01:00 [INF] Handled UpdateUserCommand with Ardalis.Result.Result`1[ActivityTracker.UseCases.Contributors.UserDTO] in 1313 ms
+2025-03-04 08:54:28.830 +01:00 [INF] Handling GetUserQuery
+2025-03-04 08:54:28.831 +01:00 [INF] Property UserId : "f3134c9d-1a7b-4e48-9bbb-08dd5af13806"
+2025-03-04 08:54:28.854 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[FullName], [u].[ProfilePhotoUrl]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__userId_0
+2025-03-04 08:54:28.858 +01:00 [INF] Handled GetUserQuery with Ardalis.Result.Result`1[ActivityTracker.UseCases.Contributors.UserDTO] in 25 ms
+2025-03-04 08:54:28.869 +01:00 [INF] Executed endpoint 'HTTP: PUT /Users/{UserId:Guid}'
+2025-03-04 08:54:28.878 +01:00 [INF] Request finished HTTP/2 PUT https://localhost:57679/Users/f3134c9d-1a7b-4e48-9bbb-08dd5af13806 - 200 null application/json; charset=utf-8 1434.1743ms
+2025-03-04 08:55:32.458 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/swagger/index.html - null null
+2025-03-04 08:55:32.474 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/swagger/index.html - 200 null text/html; charset=utf-8 15.2188ms
+2025-03-04 08:55:32.483 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-04 08:55:32.485 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/_framework/aspnetcore-browser-refresh.js - 200 13790 application/javascript; charset=utf-8 2.2993ms
+2025-03-04 08:55:32.486 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/_vs/browserLink - null null
+2025-03-04 08:55:32.507 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/_vs/browserLink - 200 null text/javascript; charset=UTF-8 20.4517ms
+2025-03-04 08:55:32.546 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/swagger/v1/swagger.json - null null
+2025-03-04 08:55:32.549 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/swagger/v1/swagger.json - 200 null application/json; charset=utf-8 2.7697ms
+2025-03-04 08:55:50.566 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/Users/{UserId} - null null
+2025-03-04 08:55:50.572 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/Users/{UserId} - 404 0 null 6.4432ms
+2025-03-04 08:55:50.575 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:57679/Users/%7BUserId%7D, Response status code: 404
+2025-03-04 11:01:39.454 +01:00 [INF] Registered 6 endpoints in 480 milliseconds.
+2025-03-04 11:01:39.882 +01:00 [INF] Now listening on: https://localhost:57679
+2025-03-04 11:01:39.888 +01:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-03-04 11:01:39.964 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-04 11:01:39.965 +01:00 [INF] Hosting environment: Development
+2025-03-04 11:01:39.966 +01:00 [INF] Content root path: C:\Users\jan.hrabe1\source\repos\jh-random-repo\ActivityTracker\ActivityTracker\src\ActivityTracker.Web
+2025-03-04 11:01:50.290 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/ - null null
+2025-03-04 11:01:50.453 +01:00 [INF] Executing endpoint 'HTTP: GET /'
+2025-03-04 11:01:50.483 +01:00 [INF] Handling ListUserQuery
+2025-03-04 11:01:50.484 +01:00 [INF] Property Skip : null
+2025-03-04 11:01:50.485 +01:00 [INF] Property Take : null
+2025-03-04 11:01:52.936 +01:00 [INF] Executed DbCommand (30ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[FullName], [u].[ProfilePhotoUrl]
+FROM [Users] AS [u]
+2025-03-04 11:01:53.007 +01:00 [INF] Handled ListUserQuery with Ardalis.Result.Result`1[System.Collections.Generic.List`1[ActivityTracker.UseCases.Contributors.UserDTO]] in 2521 ms
+2025-03-04 11:01:53.025 +01:00 [INF] Executed endpoint 'HTTP: GET /'
+2025-03-04 11:01:53.036 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/ - 200 null application/json; charset=utf-8 2756.2464ms
+2025-03-04 11:01:53.904 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/swagger/index.html - null null
+2025-03-04 11:01:53.946 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/swagger/index.html - 200 null text/html; charset=utf-8 42.1864ms
+2025-03-04 11:01:53.956 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-04 11:01:53.957 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/_vs/browserLink - null null
+2025-03-04 11:01:53.983 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/_framework/aspnetcore-browser-refresh.js - 200 13790 application/javascript; charset=utf-8 26.5614ms
+2025-03-04 11:01:54.005 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/_vs/browserLink - 200 null text/javascript; charset=UTF-8 48.6967ms
+2025-03-04 11:01:54.125 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/swagger/v1/swagger.json - null null
+2025-03-04 11:01:54.191 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/swagger/v1/swagger.json - 200 null application/json; charset=utf-8 65.9896ms
+2025-03-04 11:02:01.985 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/ - null null
+2025-03-04 11:02:01.996 +01:00 [INF] Executing endpoint 'HTTP: GET /'
+2025-03-04 11:02:01.997 +01:00 [INF] Handling ListUserQuery
+2025-03-04 11:02:01.998 +01:00 [INF] Property Skip : null
+2025-03-04 11:02:02.000 +01:00 [INF] Property Take : null
+2025-03-04 11:02:02.050 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[FullName], [u].[ProfilePhotoUrl]
+FROM [Users] AS [u]
+2025-03-04 11:02:02.053 +01:00 [INF] Handled ListUserQuery with Ardalis.Result.Result`1[System.Collections.Generic.List`1[ActivityTracker.UseCases.Contributors.UserDTO]] in 52 ms
+2025-03-04 11:02:02.054 +01:00 [INF] Executed endpoint 'HTTP: GET /'
+2025-03-04 11:02:02.056 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/ - 200 null application/json; charset=utf-8 71.2627ms
+2025-03-04 11:02:03.217 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/ - null null
+2025-03-04 11:02:03.220 +01:00 [INF] Executing endpoint 'HTTP: GET /'
+2025-03-04 11:02:03.222 +01:00 [INF] Handling ListUserQuery
+2025-03-04 11:02:03.223 +01:00 [INF] Property Skip : null
+2025-03-04 11:02:03.224 +01:00 [INF] Property Take : null
+2025-03-04 11:02:03.238 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[FullName], [u].[ProfilePhotoUrl]
+FROM [Users] AS [u]
+2025-03-04 11:02:03.241 +01:00 [INF] Handled ListUserQuery with Ardalis.Result.Result`1[System.Collections.Generic.List`1[ActivityTracker.UseCases.Contributors.UserDTO]] in 15 ms
+2025-03-04 11:02:03.242 +01:00 [INF] Executed endpoint 'HTTP: GET /'
+2025-03-04 11:02:03.243 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/ - 200 null application/json; charset=utf-8 26.6628ms
+2025-03-04 12:08:23.961 +01:00 [INF] Registered 7 endpoints in 518 milliseconds.
+2025-03-04 12:08:24.318 +01:00 [INF] Now listening on: https://localhost:57679
+2025-03-04 12:08:24.325 +01:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-03-04 12:08:25.037 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-04 12:08:25.038 +01:00 [INF] Hosting environment: Development
+2025-03-04 12:08:25.039 +01:00 [INF] Content root path: C:\Users\jan.hrabe1\source\repos\jh-random-repo\ActivityTracker\ActivityTracker\src\ActivityTracker.Web
+2025-03-04 12:08:27.278 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/ - null null
+2025-03-04 12:08:27.437 +01:00 [INF] Executing endpoint 'HTTP: GET /'
+2025-03-04 12:08:27.464 +01:00 [INF] Handling ListUserQuery
+2025-03-04 12:08:27.466 +01:00 [INF] Property Skip : null
+2025-03-04 12:08:27.467 +01:00 [INF] Property Take : null
+2025-03-04 12:08:29.748 +01:00 [INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[FullName], [u].[ProfilePhotoUrl]
+FROM [Users] AS [u]
+2025-03-04 12:08:29.823 +01:00 [INF] Handled ListUserQuery with Ardalis.Result.Result`1[System.Collections.Generic.List`1[ActivityTracker.UseCases.Contributors.UserDTO]] in 2355 ms
+2025-03-04 12:08:29.839 +01:00 [INF] Executed endpoint 'HTTP: GET /'
+2025-03-04 12:08:29.849 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/ - 200 null application/json; charset=utf-8 2576.9294ms
+2025-03-04 12:08:32.984 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/swagger/index.html - null null
+2025-03-04 12:08:33.013 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/swagger/index.html - 200 null text/html; charset=utf-8 29.241ms
+2025-03-04 12:08:33.116 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-04 12:08:33.116 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/_vs/browserLink - null null
+2025-03-04 12:08:33.139 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/_framework/aspnetcore-browser-refresh.js - 200 13790 application/javascript; charset=utf-8 23.0953ms
+2025-03-04 12:08:33.159 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/_vs/browserLink - 200 null text/javascript; charset=UTF-8 42.9269ms
+2025-03-04 12:08:33.196 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/swagger/v1/swagger.json - null null
+2025-03-04 12:08:33.249 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/swagger/v1/swagger.json - 200 null application/json; charset=utf-8 52.7535ms
+2025-03-04 12:09:00.023 +01:00 [INF] Request starting HTTP/2 POST https://localhost:57679/Users - application/json 64
+2025-03-04 12:09:00.026 +01:00 [INF] Executing endpoint 'HTTP: POST /Users'
+2025-03-04 12:09:00.066 +01:00 [INF] Handling CreateUserCommand
+2025-03-04 12:09:00.067 +01:00 [INF] Property FullName : Test User1
+2025-03-04 12:09:00.068 +01:00 [INF] Property ProfilePhotoUrl : path.jpeg
+2025-03-04 12:09:00.207 +01:00 [INF] Executed DbCommand (22ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 25), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Id], [FullName], [ProfilePhotoUrl])
+VALUES (@p0, @p1, @p2);
+2025-03-04 12:09:00.218 +01:00 [INF] Handled CreateUserCommand with Ardalis.Result.Result`1[System.Guid] in 148 ms
+2025-03-04 12:09:00.222 +01:00 [INF] Executed endpoint 'HTTP: POST /Users'
+2025-03-04 12:09:00.224 +01:00 [INF] Request finished HTTP/2 POST https://localhost:57679/Users - 200 null application/json; charset=utf-8 200.498ms
+2025-03-04 12:09:04.660 +01:00 [INF] Request starting HTTP/2 POST https://localhost:57679/Users - application/json 64
+2025-03-04 12:09:04.664 +01:00 [INF] Executing endpoint 'HTTP: POST /Users'
+2025-03-04 12:09:04.666 +01:00 [INF] Handling CreateUserCommand
+2025-03-04 12:09:04.667 +01:00 [INF] Property FullName : Test User2
+2025-03-04 12:09:04.668 +01:00 [INF] Property ProfilePhotoUrl : path.jpeg
+2025-03-04 12:09:04.681 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 25), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Id], [FullName], [ProfilePhotoUrl])
+VALUES (@p0, @p1, @p2);
+2025-03-04 12:09:04.684 +01:00 [INF] Handled CreateUserCommand with Ardalis.Result.Result`1[System.Guid] in 14 ms
+2025-03-04 12:09:04.685 +01:00 [INF] Executed endpoint 'HTTP: POST /Users'
+2025-03-04 12:09:04.686 +01:00 [INF] Request finished HTTP/2 POST https://localhost:57679/Users - 200 null application/json; charset=utf-8 26.0295ms
+2025-03-04 12:09:11.437 +01:00 [INF] Request starting HTTP/2 POST https://localhost:57679/Users - application/json 64
+2025-03-04 12:09:11.440 +01:00 [INF] Executing endpoint 'HTTP: POST /Users'
+2025-03-04 12:09:11.443 +01:00 [INF] Handling CreateUserCommand
+2025-03-04 12:09:11.443 +01:00 [INF] Property FullName : Test User3
+2025-03-04 12:09:11.444 +01:00 [INF] Property ProfilePhotoUrl : path.jpeg
+2025-03-04 12:09:11.450 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 25), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Id], [FullName], [ProfilePhotoUrl])
+VALUES (@p0, @p1, @p2);
+2025-03-04 12:09:11.452 +01:00 [INF] Handled CreateUserCommand with Ardalis.Result.Result`1[System.Guid] in 6 ms
+2025-03-04 12:09:11.453 +01:00 [INF] Executed endpoint 'HTTP: POST /Users'
+2025-03-04 12:09:11.455 +01:00 [INF] Request finished HTTP/2 POST https://localhost:57679/Users - 200 null application/json; charset=utf-8 18.0539ms
+2025-03-04 12:09:14.866 +01:00 [INF] Request starting HTTP/2 POST https://localhost:57679/Users - application/json 64
+2025-03-04 12:09:14.868 +01:00 [INF] Executing endpoint 'HTTP: POST /Users'
+2025-03-04 12:09:14.869 +01:00 [INF] Handling CreateUserCommand
+2025-03-04 12:09:14.870 +01:00 [INF] Property FullName : Test User4
+2025-03-04 12:09:14.871 +01:00 [INF] Property ProfilePhotoUrl : path.jpeg
+2025-03-04 12:09:14.876 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 25), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Id], [FullName], [ProfilePhotoUrl])
+VALUES (@p0, @p1, @p2);
+2025-03-04 12:09:14.877 +01:00 [INF] Handled CreateUserCommand with Ardalis.Result.Result`1[System.Guid] in 5 ms
+2025-03-04 12:09:14.878 +01:00 [INF] Executed endpoint 'HTTP: POST /Users'
+2025-03-04 12:09:14.880 +01:00 [INF] Request finished HTTP/2 POST https://localhost:57679/Users - 200 null application/json; charset=utf-8 14.1265ms
+2025-03-04 12:09:21.649 +01:00 [INF] Request starting HTTP/2 POST https://localhost:57679/Users - application/json 64
+2025-03-04 12:09:21.652 +01:00 [INF] Executing endpoint 'HTTP: POST /Users'
+2025-03-04 12:09:21.653 +01:00 [INF] Handling CreateUserCommand
+2025-03-04 12:09:21.654 +01:00 [INF] Property FullName : Test User5
+2025-03-04 12:09:21.654 +01:00 [INF] Property ProfilePhotoUrl : path.jpeg
+2025-03-04 12:09:21.658 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 25), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Id], [FullName], [ProfilePhotoUrl])
+VALUES (@p0, @p1, @p2);
+2025-03-04 12:09:21.660 +01:00 [INF] Handled CreateUserCommand with Ardalis.Result.Result`1[System.Guid] in 5 ms
+2025-03-04 12:09:21.662 +01:00 [INF] Executed endpoint 'HTTP: POST /Users'
+2025-03-04 12:09:21.663 +01:00 [INF] Request finished HTTP/2 POST https://localhost:57679/Users - 200 null application/json; charset=utf-8 14.3231ms
+2025-03-04 12:09:28.908 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/ - null null
+2025-03-04 12:09:28.914 +01:00 [INF] Executing endpoint 'HTTP: GET /'
+2025-03-04 12:09:28.915 +01:00 [INF] Handling ListUserQuery
+2025-03-04 12:09:28.916 +01:00 [INF] Property Skip : null
+2025-03-04 12:09:28.917 +01:00 [INF] Property Take : null
+2025-03-04 12:09:28.921 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[FullName], [u].[ProfilePhotoUrl]
+FROM [Users] AS [u]
+2025-03-04 12:09:28.924 +01:00 [INF] Handled ListUserQuery with Ardalis.Result.Result`1[System.Collections.Generic.List`1[ActivityTracker.UseCases.Contributors.UserDTO]] in 5 ms
+2025-03-04 12:09:28.925 +01:00 [INF] Executed endpoint 'HTTP: GET /'
+2025-03-04 12:09:28.927 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/ - 200 null application/json; charset=utf-8 18.3355ms
+2025-03-04 12:10:51.688 +01:00 [INF] Request starting HTTP/2 POST https://localhost:57679/Projects - application/json 968
+2025-03-04 12:10:51.692 +01:00 [INF] Executing endpoint 'HTTP: POST /Projects'
+2025-03-04 12:10:51.717 +01:00 [INF] Executed endpoint 'HTTP: POST /Projects'
+2025-03-04 12:10:51.722 +01:00 [INF] Request finished HTTP/2 POST https://localhost:57679/Projects - 400 null application/problem+json; charset=utf-8 34.2798ms
+2025-03-04 12:11:44.516 +01:00 [INF] Request starting HTTP/2 POST https://localhost:57679/Projects - application/json 408
+2025-03-04 12:11:44.519 +01:00 [INF] Executing endpoint 'HTTP: POST /Projects'
+2025-03-04 12:11:44.524 +01:00 [INF] Executed endpoint 'HTTP: POST /Projects'
+2025-03-04 12:11:44.531 +01:00 [INF] Request finished HTTP/2 POST https://localhost:57679/Projects - 400 null application/problem+json; charset=utf-8 14.8946ms
+2025-03-04 15:07:12.860 +01:00 [INF] Registered 7 endpoints in 427 milliseconds.
+2025-03-04 15:07:13.287 +01:00 [INF] Now listening on: https://localhost:57679
+2025-03-04 15:07:13.292 +01:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-03-04 15:07:13.846 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-04 15:07:13.847 +01:00 [INF] Hosting environment: Development
+2025-03-04 15:07:13.848 +01:00 [INF] Content root path: C:\Users\jan.hrabe1\source\repos\jh-random-repo\ActivityTracker\ActivityTracker\src\ActivityTracker.Web
+2025-03-04 15:07:15.875 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/ - null null
+2025-03-04 15:07:16.123 +01:00 [INF] Executing endpoint 'HTTP: GET /'
+2025-03-04 15:07:16.153 +01:00 [INF] Handling ListUserQuery
+2025-03-04 15:07:16.154 +01:00 [INF] Property Skip : null
+2025-03-04 15:07:16.155 +01:00 [INF] Property Take : null
+2025-03-04 15:07:18.182 +01:00 [INF] Executed DbCommand (29ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[FullName], [u].[ProfilePhotoUrl]
+FROM [Users] AS [u]
+2025-03-04 15:07:18.274 +01:00 [INF] Handled ListUserQuery with Ardalis.Result.Result`1[System.Collections.Generic.List`1[ActivityTracker.UseCases.Contributors.UserDTO]] in 2116 ms
+2025-03-04 15:07:18.290 +01:00 [INF] Executed endpoint 'HTTP: GET /'
+2025-03-04 15:07:18.300 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/ - 200 null application/json; charset=utf-8 2436.671ms
+2025-03-04 15:07:18.335 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/favicon.ico - null null
+2025-03-04 15:07:18.340 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/favicon.ico - 404 0 null 4.9796ms
+2025-03-04 15:07:18.344 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:57679/favicon.ico, Response status code: 404
+2025-03-04 15:07:19.360 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/swagger - null null
+2025-03-04 15:07:19.371 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/swagger - 302 0 null 11.4481ms
+2025-03-04 15:07:19.378 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/swagger/index.html - null null
+2025-03-04 15:07:19.400 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/swagger/index.html - 200 null text/html; charset=utf-8 21.693ms
+2025-03-04 15:07:19.412 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-04 15:07:19.421 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/_vs/browserLink - null null
+2025-03-04 15:07:19.431 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/_framework/aspnetcore-browser-refresh.js - 200 13790 application/javascript; charset=utf-8 18.873ms
+2025-03-04 15:07:19.472 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/_vs/browserLink - 200 null text/javascript; charset=UTF-8 50.6556ms
+2025-03-04 15:07:19.567 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/swagger/v1/swagger.json - null null
+2025-03-04 15:07:19.609 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/swagger/v1/swagger.json - 200 null application/json; charset=utf-8 41.7727ms
+2025-03-04 15:07:42.879 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/ - null null
+2025-03-04 15:07:42.884 +01:00 [INF] Executing endpoint 'HTTP: GET /'
+2025-03-04 15:07:42.885 +01:00 [INF] Handling ListUserQuery
+2025-03-04 15:07:42.886 +01:00 [INF] Property Skip : null
+2025-03-04 15:07:42.887 +01:00 [INF] Property Take : null
+2025-03-04 15:07:42.928 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[FullName], [u].[ProfilePhotoUrl]
+FROM [Users] AS [u]
+2025-03-04 15:07:42.931 +01:00 [INF] Handled ListUserQuery with Ardalis.Result.Result`1[System.Collections.Generic.List`1[ActivityTracker.UseCases.Contributors.UserDTO]] in 42 ms
+2025-03-04 15:07:42.933 +01:00 [INF] Executed endpoint 'HTTP: GET /'
+2025-03-04 15:07:42.940 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/ - 200 null application/json; charset=utf-8 60.9448ms
+2025-03-04 15:07:47.516 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/swagger - null null
+2025-03-04 15:07:47.521 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/swagger - 302 0 null 4.6246ms
+2025-03-04 15:07:47.528 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/swagger/index.html - null null
+2025-03-04 15:07:47.538 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/swagger/index.html - 200 null text/html; charset=utf-8 10.3321ms
+2025-03-04 15:07:47.555 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-04 15:07:47.558 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/_framework/aspnetcore-browser-refresh.js - 200 13790 application/javascript; charset=utf-8 2.8777ms
+2025-03-04 15:07:47.561 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/_vs/browserLink - null null
+2025-03-04 15:07:47.577 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/_vs/browserLink - 200 null text/javascript; charset=UTF-8 16.6776ms
+2025-03-04 15:07:47.626 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/swagger/v1/swagger.json - null null
+2025-03-04 15:07:47.629 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/swagger/v1/swagger.json - 200 null application/json; charset=utf-8 2.7855ms
+2025-03-04 15:08:06.618 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/ - null null
+2025-03-04 15:08:06.621 +01:00 [INF] Executing endpoint 'HTTP: GET /'
+2025-03-04 15:08:06.623 +01:00 [INF] Handling ListUserQuery
+2025-03-04 15:08:06.624 +01:00 [INF] Property Skip : null
+2025-03-04 15:08:06.625 +01:00 [INF] Property Take : null
+2025-03-04 15:08:06.635 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[FullName], [u].[ProfilePhotoUrl]
+FROM [Users] AS [u]
+2025-03-04 15:08:06.637 +01:00 [INF] Handled ListUserQuery with Ardalis.Result.Result`1[System.Collections.Generic.List`1[ActivityTracker.UseCases.Contributors.UserDTO]] in 11 ms
+2025-03-04 15:08:06.639 +01:00 [INF] Executed endpoint 'HTTP: GET /'
+2025-03-04 15:08:06.639 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/ - 200 null application/json; charset=utf-8 21.6473ms
+2025-03-04 15:08:07.340 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/ - null null
+2025-03-04 15:08:07.342 +01:00 [INF] Executing endpoint 'HTTP: GET /'
+2025-03-04 15:08:07.343 +01:00 [INF] Handling ListUserQuery
+2025-03-04 15:08:07.344 +01:00 [INF] Property Skip : null
+2025-03-04 15:08:07.346 +01:00 [INF] Property Take : null
+2025-03-04 15:08:07.349 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[FullName], [u].[ProfilePhotoUrl]
+FROM [Users] AS [u]
+2025-03-04 15:08:07.351 +01:00 [INF] Handled ListUserQuery with Ardalis.Result.Result`1[System.Collections.Generic.List`1[ActivityTracker.UseCases.Contributors.UserDTO]] in 3 ms
+2025-03-04 15:08:07.352 +01:00 [INF] Executed endpoint 'HTTP: GET /'
+2025-03-04 15:08:07.353 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/ - 200 null application/json; charset=utf-8 13.1045ms
+2025-03-04 15:11:20.540 +01:00 [INF] Request starting HTTP/2 POST https://localhost:57679/Projects - application/json 414
+2025-03-04 15:11:20.544 +01:00 [INF] Executing endpoint 'HTTP: POST /Projects'
+2025-03-04 15:11:20.585 +01:00 [INF] Executed endpoint 'HTTP: POST /Projects'
+2025-03-04 15:11:20.588 +01:00 [INF] Request finished HTTP/2 POST https://localhost:57679/Projects - 400 null application/problem+json; charset=utf-8 48.6891ms
+2025-03-04 16:08:06.273 +01:00 [INF] Registered 7 endpoints in 482 milliseconds.
+2025-03-04 16:08:06.579 +01:00 [INF] Now listening on: https://localhost:57679
+2025-03-04 16:08:06.585 +01:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-03-04 16:08:06.656 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-04 16:08:06.657 +01:00 [INF] Hosting environment: Development
+2025-03-04 16:08:06.657 +01:00 [INF] Content root path: C:\Users\jan.hrabe1\source\repos\jh-random-repo\ActivityTracker\ActivityTracker\src\ActivityTracker.Web
+2025-03-04 16:08:13.015 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/swagger/index.html - null null
+2025-03-04 16:08:13.200 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/swagger/index.html - 200 null text/html; charset=utf-8 191.0876ms
+2025-03-04 16:08:13.207 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-04 16:08:13.212 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/_vs/browserLink - null null
+2025-03-04 16:08:13.213 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/_framework/aspnetcore-browser-refresh.js - 200 13790 application/javascript; charset=utf-8 5.9512ms
+2025-03-04 16:08:13.252 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/_vs/browserLink - 200 null text/javascript; charset=UTF-8 39.4307ms
+2025-03-04 16:08:13.338 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/swagger/v1/swagger.json - null null
+2025-03-04 16:08:13.380 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/swagger/v1/swagger.json - 200 null application/json; charset=utf-8 42.1539ms
+2025-03-04 16:08:19.436 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/ - null null
+2025-03-04 16:08:19.440 +01:00 [INF] Executing endpoint 'HTTP: GET /'
+2025-03-04 16:08:19.466 +01:00 [INF] Handling ListUserQuery
+2025-03-04 16:08:19.467 +01:00 [INF] Property Skip : null
+2025-03-04 16:08:19.469 +01:00 [INF] Property Take : null
+2025-03-04 16:08:21.728 +01:00 [INF] Executed DbCommand (35ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[FullName], [u].[ProfilePhotoUrl]
+FROM [Users] AS [u]
+2025-03-04 16:08:21.783 +01:00 [INF] Handled ListUserQuery with Ardalis.Result.Result`1[System.Collections.Generic.List`1[ActivityTracker.UseCases.Contributors.UserDTO]] in 2313 ms
+2025-03-04 16:08:21.796 +01:00 [INF] Executed endpoint 'HTTP: GET /'
+2025-03-04 16:08:21.803 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/ - 200 null application/json; charset=utf-8 2367.462ms
+2025-03-04 16:09:20.459 +01:00 [INF] Request starting HTTP/2 POST https://localhost:57679/Projects - application/json 88
+2025-03-04 16:09:20.463 +01:00 [INF] Executing endpoint 'HTTP: POST /Projects'
+2025-03-04 16:09:20.495 +01:00 [INF] Handling CreateProjectCommand
+2025-03-04 16:09:20.496 +01:00 [INF] Property Name : TestProject
+2025-03-04 16:09:20.499 +01:00 [INF] Property UserIds : ["b46c73ff-1201-4e42-e2e7-08dd5b0cf72c"]
+2025-03-04 16:09:20.656 +01:00 [INF] Executed DbCommand (19ms) [Parameters=[@__userIds_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[FullName], [u].[ProfilePhotoUrl]
+FROM [Users] AS [u]
+WHERE [u].[Id] IN (
+    SELECT [u0].[value]
+    FROM OPENJSON(@__userIds_0) WITH ([value] uniqueidentifier '$') AS [u0]
+)
+2025-03-04 16:09:20.781 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 25), @p2='?' (DbType = Guid), @p3='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Projects] ([Id], [Name])
+VALUES (@p0, @p1);
+INSERT INTO [ProjectUser] ([ProjectsId], [UsersId])
+VALUES (@p2, @p3);
+2025-03-04 16:09:20.799 +01:00 [INF] Handled CreateProjectCommand with Ardalis.Result.Result`1[ActivityTracker.UseCases.ProjectDTO] in 296 ms
+2025-03-04 16:09:20.810 +01:00 [INF] Executed endpoint 'HTTP: POST /Projects'
+2025-03-04 16:09:20.811 +01:00 [INF] Request finished HTTP/2 POST https://localhost:57679/Projects - 200 null application/json; charset=utf-8 352.806ms
+2025-03-04 16:09:38.233 +01:00 [INF] Request starting HTTP/2 POST https://localhost:57679/Activitys - application/json 205
+2025-03-04 16:09:38.238 +01:00 [INF] Executing endpoint 'HTTP: POST /Activitys'
+2025-03-04 16:09:38.248 +01:00 [INF] Handling CreateActivityCommand
+2025-03-04 16:09:38.250 +01:00 [INF] Property StartDate : "0001-01-01T00:00:00.0000000"
+2025-03-04 16:09:38.252 +01:00 [INF] Property Category : Category
+2025-03-04 16:09:38.253 +01:00 [INF] Property Description : Description
+2025-03-04 16:09:38.255 +01:00 [INF] Property UserId : "00000000-0000-0000-0000-000000000000"
+2025-03-04 16:09:38.257 +01:00 [INF] Property ProjectId : "00000000-0000-0000-0000-000000000000"
+2025-03-04 16:09:38.299 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[Category], [a].[Description], [a].[EndDate], [a].[ProjectId], [a].[StartDate], [a].[UserId]
+FROM [Activities] AS [a]
+WHERE [a].[UserId] = @__userId_0 AND [a].[EndDate] IS NULL
+2025-03-04 16:09:38.327 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (Size = 100), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Guid), @p5='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Activities] ([Id], [Category], [Description], [EndDate], [ProjectId], [UserId])
+OUTPUT INSERTED.[StartDate]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2025-03-04 16:09:38.346 +01:00 [ERR] An exception occurred in the database while saving changes for context type 'ActivityTracker.Infrastructure.Data.AppDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Activities_Projects_ProjectId". The conflict occurred in database "ActivityTracker", table "dbo.Projects", column 'Id'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:89f6fd59-3616-4084-81d7-aa12d84cb383
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Activities_Projects_ProjectId". The conflict occurred in database "ActivityTracker", table "dbo.Projects", column 'Id'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:89f6fd59-3616-4084-81d7-aa12d84cb383
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2025-03-04 16:10:08.269 +01:00 [INF] Registered 7 endpoints in 444 milliseconds.
+2025-03-04 16:10:08.618 +01:00 [INF] Now listening on: https://localhost:57679
+2025-03-04 16:10:08.624 +01:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-03-04 16:10:08.685 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-04 16:10:08.686 +01:00 [INF] Hosting environment: Development
+2025-03-04 16:10:08.687 +01:00 [INF] Content root path: C:\Users\jan.hrabe1\source\repos\jh-random-repo\ActivityTracker\ActivityTracker\src\ActivityTracker.Web
+2025-03-04 16:11:39.368 +01:00 [INF] Request starting HTTP/2 POST https://localhost:57679/Activitys - application/json 213
+2025-03-04 16:11:39.401 +01:00 [INF] Executing endpoint 'HTTP: POST /Activitys'
+2025-03-04 16:11:39.453 +01:00 [INF] Handling CreateActivityCommand
+2025-03-04 16:11:39.455 +01:00 [INF] Property StartDate : "2025-05-05T00:00:00.0000000"
+2025-03-04 16:11:39.456 +01:00 [INF] Property Category : TestCategory
+2025-03-04 16:11:39.458 +01:00 [INF] Property Description : TestDescription
+2025-03-04 16:11:39.459 +01:00 [INF] Property UserId : "b46c73ff-1201-4e42-e2e7-08dd5b0cf72c"
+2025-03-04 16:11:39.461 +01:00 [INF] Property ProjectId : "3cc829bd-2f86-4a32-ef45-08dd5b2e8a7f"
+2025-03-04 16:11:40.587 +01:00 [INF] Executed DbCommand (49ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[Category], [a].[Description], [a].[EndDate], [a].[ProjectId], [a].[StartDate], [a].[UserId]
+FROM [Activities] AS [a]
+WHERE [a].[UserId] = @__userId_0 AND [a].[EndDate] IS NULL
+2025-03-04 16:11:40.725 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (Size = 100), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Guid), @p5='?' (DbType = DateTime2), @p6='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Activities] ([Id], [Category], [Description], [EndDate], [ProjectId], [StartDate], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2025-03-04 16:11:40.735 +01:00 [INF] Handled CreateActivityCommand with Ardalis.Result.Result`1[ActivityTracker.UseCases.Users.ActivityByUserIdDTO] in 1272 ms
+2025-03-04 16:11:40.743 +01:00 [INF] Executed endpoint 'HTTP: POST /Activitys'
+2025-03-04 16:11:40.754 +01:00 [INF] Request finished HTTP/2 POST https://localhost:57679/Activitys - 200 null application/json; charset=utf-8 1390.9572ms
+2025-03-04 16:13:32.011 +01:00 [INF] Registered 7 endpoints in 436 milliseconds.
+2025-03-04 16:13:32.302 +01:00 [INF] Now listening on: https://localhost:57679
+2025-03-04 16:13:32.307 +01:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-03-04 16:13:32.397 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-04 16:13:32.398 +01:00 [INF] Hosting environment: Development
+2025-03-04 16:13:32.399 +01:00 [INF] Content root path: C:\Users\jan.hrabe1\source\repos\jh-random-repo\ActivityTracker\ActivityTracker\src\ActivityTracker.Web
+2025-03-04 16:14:10.213 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/Users/{UserId} - null null
+2025-03-04 16:14:10.253 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/Users/{UserId} - 404 0 null 45.0568ms
+2025-03-04 16:14:10.264 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:57679/Users/%7BUserId%7D, Response status code: 404
+2025-03-04 16:15:15.075 +01:00 [INF] Request starting HTTP/2 PUT https://localhost:57679/Users/e3600644-0624-4a2a-e2e5-08dd5b0cf72c - application/json 61
+2025-03-04 16:15:15.079 +01:00 [INF] Executing endpoint 'HTTP: PUT /Users/{UserId:Guid}'
+2025-03-04 16:15:15.137 +01:00 [INF] Handling UpdateUserCommand
+2025-03-04 16:15:15.138 +01:00 [INF] Property UserId : "e3600644-0624-4a2a-e2e5-08dd5b0cf72c"
+2025-03-04 16:15:15.140 +01:00 [INF] Property NewName : Test User6
+2025-03-04 16:15:15.141 +01:00 [INF] Property NewProfilePictureUrl : string
+2025-03-04 16:15:16.272 +01:00 [INF] Executed DbCommand (36ms) [Parameters=[@__p_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[FullName], [u].[ProfilePhotoUrl]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__p_0
+2025-03-04 16:15:16.385 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@p2='?' (DbType = Guid), @p0='?' (Size = 25), @p1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [FullName] = @p0, [ProfilePhotoUrl] = @p1
+OUTPUT 1
+WHERE [Id] = @p2;
+2025-03-04 16:15:16.397 +01:00 [INF] Handled UpdateUserCommand with Ardalis.Result.Result`1[ActivityTracker.UseCases.Contributors.UserDTO] in 1254 ms
+2025-03-04 16:15:16.400 +01:00 [INF] Handling GetUserQuery
+2025-03-04 16:15:16.401 +01:00 [INF] Property UserId : "e3600644-0624-4a2a-e2e5-08dd5b0cf72c"
+2025-03-04 16:15:16.423 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[FullName], [u].[ProfilePhotoUrl]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__userId_0
+2025-03-04 16:15:16.436 +01:00 [INF] Handled GetUserQuery with Ardalis.Result.Result`1[ActivityTracker.UseCases.Contributors.UserDTO] in 34 ms
+2025-03-04 16:15:16.446 +01:00 [INF] Executed endpoint 'HTTP: PUT /Users/{UserId:Guid}'
+2025-03-04 16:15:16.453 +01:00 [INF] Request finished HTTP/2 PUT https://localhost:57679/Users/e3600644-0624-4a2a-e2e5-08dd5b0cf72c - 200 null application/json; charset=utf-8 1378.5925ms
+2025-03-04 16:15:30.274 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/Users/{UserId} - null null
+2025-03-04 16:15:30.277 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/Users/{UserId} - 404 0 null 3.1192ms
+2025-03-04 16:15:30.281 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:57679/Users/%7BUserId%7D, Response status code: 404
+2025-03-04 16:15:38.318 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/ - null null
+2025-03-04 16:15:38.321 +01:00 [INF] Executing endpoint 'HTTP: GET /'
+2025-03-04 16:15:38.333 +01:00 [INF] Handling ListUserQuery
+2025-03-04 16:15:38.334 +01:00 [INF] Property Skip : null
+2025-03-04 16:15:38.335 +01:00 [INF] Property Take : null
+2025-03-04 16:15:38.374 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[FullName], [u].[ProfilePhotoUrl]
+FROM [Users] AS [u]
+2025-03-04 16:15:38.378 +01:00 [INF] Handled ListUserQuery with Ardalis.Result.Result`1[System.Collections.Generic.List`1[ActivityTracker.UseCases.Contributors.UserDTO]] in 41 ms
+2025-03-04 16:15:38.381 +01:00 [INF] Executed endpoint 'HTTP: GET /'
+2025-03-04 16:15:38.383 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/ - 200 null application/json; charset=utf-8 64.3017ms
+2025-03-04 16:16:32.653 +01:00 [INF] Request starting HTTP/2 PUT https://localhost:57679/Users/e3600644-0624-4a2a-e2e5-08dd5b0cf72c - application/json 61
+2025-03-04 16:16:32.660 +01:00 [INF] Executing endpoint 'HTTP: PUT /Users/{UserId:Guid}'
+2025-03-04 16:16:32.662 +01:00 [INF] Handling UpdateUserCommand
+2025-03-04 16:16:32.662 +01:00 [INF] Property UserId : "e3600644-0624-4a2a-e2e5-08dd5b0cf72c"
+2025-03-04 16:16:32.663 +01:00 [INF] Property NewName : Test User1
+2025-03-04 16:16:32.664 +01:00 [INF] Property NewProfilePictureUrl : string
+2025-03-04 16:16:32.677 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[FullName], [u].[ProfilePhotoUrl]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__p_0
+2025-03-04 16:16:32.682 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@p2='?' (DbType = Guid), @p0='?' (Size = 25), @p1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [FullName] = @p0, [ProfilePhotoUrl] = @p1
+OUTPUT 1
+WHERE [Id] = @p2;
+2025-03-04 16:16:32.685 +01:00 [INF] Handled UpdateUserCommand with Ardalis.Result.Result`1[ActivityTracker.UseCases.Contributors.UserDTO] in 19 ms
+2025-03-04 16:16:32.686 +01:00 [INF] Handling GetUserQuery
+2025-03-04 16:16:32.687 +01:00 [INF] Property UserId : "e3600644-0624-4a2a-e2e5-08dd5b0cf72c"
+2025-03-04 16:16:32.690 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[FullName], [u].[ProfilePhotoUrl]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__userId_0
+2025-03-04 16:16:32.692 +01:00 [INF] Handled GetUserQuery with Ardalis.Result.Result`1[ActivityTracker.UseCases.Contributors.UserDTO] in 4 ms
+2025-03-04 16:16:32.694 +01:00 [INF] Executed endpoint 'HTTP: PUT /Users/{UserId:Guid}'
+2025-03-04 16:16:32.699 +01:00 [INF] Request finished HTTP/2 PUT https://localhost:57679/Users/e3600644-0624-4a2a-e2e5-08dd5b0cf72c - 200 null application/json; charset=utf-8 46.6884ms
+2025-03-04 16:16:41.533 +01:00 [INF] Request starting HTTP/2 PUT https://localhost:57679/Users/f3134c9d-1a7b-4e48-9bbb-08dd5af13806 - application/json 61
+2025-03-04 16:16:41.537 +01:00 [INF] Executing endpoint 'HTTP: PUT /Users/{UserId:Guid}'
+2025-03-04 16:16:41.540 +01:00 [INF] Handling UpdateUserCommand
+2025-03-04 16:16:41.541 +01:00 [INF] Property UserId : "f3134c9d-1a7b-4e48-9bbb-08dd5af13806"
+2025-03-04 16:16:41.542 +01:00 [INF] Property NewName : Test User6
+2025-03-04 16:16:41.543 +01:00 [INF] Property NewProfilePictureUrl : string
+2025-03-04 16:16:41.547 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[FullName], [u].[ProfilePhotoUrl]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__p_0
+2025-03-04 16:16:41.551 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@p2='?' (DbType = Guid), @p0='?' (Size = 25), @p1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [FullName] = @p0, [ProfilePhotoUrl] = @p1
+OUTPUT 1
+WHERE [Id] = @p2;
+2025-03-04 16:16:41.553 +01:00 [INF] Handled UpdateUserCommand with Ardalis.Result.Result`1[ActivityTracker.UseCases.Contributors.UserDTO] in 8 ms
+2025-03-04 16:16:41.555 +01:00 [INF] Handling GetUserQuery
+2025-03-04 16:16:41.556 +01:00 [INF] Property UserId : "f3134c9d-1a7b-4e48-9bbb-08dd5af13806"
+2025-03-04 16:16:41.559 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[FullName], [u].[ProfilePhotoUrl]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__userId_0
+2025-03-04 16:16:41.560 +01:00 [INF] Handled GetUserQuery with Ardalis.Result.Result`1[ActivityTracker.UseCases.Contributors.UserDTO] in 3 ms
+2025-03-04 16:16:41.562 +01:00 [INF] Executed endpoint 'HTTP: PUT /Users/{UserId:Guid}'
+2025-03-04 16:16:41.562 +01:00 [INF] Request finished HTTP/2 PUT https://localhost:57679/Users/f3134c9d-1a7b-4e48-9bbb-08dd5af13806 - 200 null application/json; charset=utf-8 29.6633ms
+2025-03-04 16:27:37.377 +01:00 [INF] Registered 7 endpoints in 454 milliseconds.
+2025-03-04 16:27:37.688 +01:00 [INF] Now listening on: https://localhost:57679
+2025-03-04 16:27:37.694 +01:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-03-04 16:27:37.764 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-04 16:27:37.765 +01:00 [INF] Hosting environment: Development
+2025-03-04 16:27:37.766 +01:00 [INF] Content root path: C:\Users\jan.hrabe1\source\repos\jh-random-repo\ActivityTracker\ActivityTracker\src\ActivityTracker.Web
+2025-03-04 16:27:51.100 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/swagger/index.html - null null
+2025-03-04 16:27:51.311 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/swagger/index.html - 200 null text/html; charset=utf-8 219.9775ms
+2025-03-04 16:27:51.323 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/_vs/browserLink - null null
+2025-03-04 16:27:51.323 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-04 16:27:51.331 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/_framework/aspnetcore-browser-refresh.js - 200 13790 application/javascript; charset=utf-8 8.7868ms
+2025-03-04 16:27:51.359 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/_vs/browserLink - 200 null text/javascript; charset=UTF-8 36.3358ms
+2025-03-04 16:27:51.439 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/swagger/v1/swagger.json - null null
+2025-03-04 16:27:51.483 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/swagger/v1/swagger.json - 200 null application/json; charset=utf-8 44.0643ms
+2025-03-04 16:28:02.080 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/Users - null null
+2025-03-04 16:28:02.085 +01:00 [INF] Executing endpoint 'HTTP: GET /Users'
+2025-03-04 16:28:02.114 +01:00 [INF] Handling ListUserQuery
+2025-03-04 16:28:02.115 +01:00 [INF] Property Skip : null
+2025-03-04 16:28:02.116 +01:00 [INF] Property Take : null
+2025-03-04 16:28:04.404 +01:00 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[FullName], [u].[ProfilePhotoUrl]
+FROM [Users] AS [u]
+2025-03-04 16:28:04.467 +01:00 [INF] Handled ListUserQuery with Ardalis.Result.Result`1[System.Collections.Generic.List`1[ActivityTracker.UseCases.Contributors.UserDTO]] in 2350 ms
+2025-03-04 16:28:04.481 +01:00 [INF] Executed endpoint 'HTTP: GET /Users'
+2025-03-04 16:28:04.491 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/Users - 200 null application/json; charset=utf-8 2411.0075ms
+2025-03-04 16:28:22.075 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/Users/e3600644-0624-4a2a-e2e5-08dd5b0cf72c - null null
+2025-03-04 16:28:22.079 +01:00 [INF] Executing endpoint 'HTTP: GET /Users/{UserId:Guid}'
+2025-03-04 16:28:22.111 +01:00 [INF] Handling GetUserQuery
+2025-03-04 16:28:22.113 +01:00 [INF] Property UserId : "e3600644-0624-4a2a-e2e5-08dd5b0cf72c"
+2025-03-04 16:32:05.928 +01:00 [INF] Registered 7 endpoints in 423 milliseconds.
+2025-03-04 16:32:06.234 +01:00 [INF] Now listening on: https://localhost:57679
+2025-03-04 16:32:06.239 +01:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-03-04 16:32:06.785 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-04 16:32:06.786 +01:00 [INF] Hosting environment: Development
+2025-03-04 16:32:06.787 +01:00 [INF] Content root path: C:\Users\jan.hrabe1\source\repos\jh-random-repo\ActivityTracker\ActivityTracker\src\ActivityTracker.Web
+2025-03-04 16:33:59.929 +01:00 [INF] Registered 7 endpoints in 169 milliseconds.
+2025-03-04 16:34:00.083 +01:00 [INF] Now listening on: https://localhost:57679
+2025-03-04 16:34:00.087 +01:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-03-04 16:34:00.133 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-04 16:34:00.134 +01:00 [INF] Hosting environment: Development
+2025-03-04 16:34:00.135 +01:00 [INF] Content root path: C:\Users\jan.hrabe1\source\repos\jh-random-repo\ActivityTracker\ActivityTracker\src\ActivityTracker.Web
+2025-03-04 16:34:02.601 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/ - null null
+2025-03-04 16:34:02.701 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/ - 404 0 null 100.6362ms
+2025-03-04 16:34:02.714 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:57679/, Response status code: 404
+2025-03-04 16:34:09.657 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/swagger - null null
+2025-03-04 16:34:09.668 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/swagger - 302 0 null 11.4278ms
+2025-03-04 16:34:09.675 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/swagger/index.html - null null
+2025-03-04 16:34:09.699 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/swagger/index.html - 200 null text/html; charset=utf-8 23.8054ms
+2025-03-04 16:34:09.724 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-04 16:34:09.736 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/_framework/aspnetcore-browser-refresh.js - 200 13790 application/javascript; charset=utf-8 12.2923ms
+2025-03-04 16:34:09.742 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/_vs/browserLink - null null
+2025-03-04 16:34:09.766 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/_vs/browserLink - 200 null text/javascript; charset=UTF-8 23.5492ms
+2025-03-04 16:34:09.882 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/swagger/v1/swagger.json - null null
+2025-03-04 16:34:09.915 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/swagger/v1/swagger.json - 200 null application/json; charset=utf-8 32.3881ms
+2025-03-04 16:34:26.028 +01:00 [INF] Registered 7 endpoints in 444 milliseconds.
+2025-03-04 16:34:26.364 +01:00 [INF] Now listening on: https://localhost:57679
+2025-03-04 16:34:26.369 +01:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-03-04 16:34:26.435 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-04 16:34:26.436 +01:00 [INF] Hosting environment: Development
+2025-03-04 16:34:26.436 +01:00 [INF] Content root path: C:\Users\jan.hrabe1\source\repos\jh-random-repo\ActivityTracker\ActivityTracker\src\ActivityTracker.Web
+2025-03-04 16:34:36.066 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/swagger/index.html - null null
+2025-03-04 16:34:36.240 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/swagger/index.html - 200 null text/html; charset=utf-8 178.835ms
+2025-03-04 16:34:36.268 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/_vs/browserLink - null null
+2025-03-04 16:34:36.268 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-04 16:34:36.282 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/_framework/aspnetcore-browser-refresh.js - 200 13790 application/javascript; charset=utf-8 14.4442ms
+2025-03-04 16:34:36.302 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/_vs/browserLink - 200 null text/javascript; charset=UTF-8 34.1589ms
+2025-03-04 16:34:36.327 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/swagger/v1/swagger.json - null null
+2025-03-04 16:34:36.366 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/swagger/v1/swagger.json - 200 null application/json; charset=utf-8 39.4077ms
+2025-03-04 16:34:50.578 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/Users/e3600644-0624-4a2a-e2e5-08dd5b0cf72c - null null
+2025-03-04 16:34:50.585 +01:00 [INF] Executing endpoint 'HTTP: GET /Users/{UserId:Guid}'
+2025-03-04 16:35:21.248 +01:00 [INF] Handling GetUserQuery
+2025-03-04 16:35:21.286 +01:00 [INF] Property UserId : "e3600644-0624-4a2a-e2e5-08dd5b0cf72c"
+2025-03-04 16:37:12.807 +01:00 [INF] Registered 7 endpoints in 454 milliseconds.
+2025-03-04 16:37:13.120 +01:00 [INF] Now listening on: https://localhost:57679
+2025-03-04 16:37:13.126 +01:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-03-04 16:37:13.196 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-04 16:37:13.197 +01:00 [INF] Hosting environment: Development
+2025-03-04 16:37:13.197 +01:00 [INF] Content root path: C:\Users\jan.hrabe1\source\repos\jh-random-repo\ActivityTracker\ActivityTracker\src\ActivityTracker.Web
+2025-03-04 16:37:46.093 +01:00 [INF] Registered 7 endpoints in 454 milliseconds.
+2025-03-04 16:37:46.396 +01:00 [INF] Now listening on: https://localhost:57679
+2025-03-04 16:37:46.401 +01:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-03-04 16:37:46.470 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-04 16:37:46.471 +01:00 [INF] Hosting environment: Development
+2025-03-04 16:37:46.472 +01:00 [INF] Content root path: C:\Users\jan.hrabe1\source\repos\jh-random-repo\ActivityTracker\ActivityTracker\src\ActivityTracker.Web
+2025-03-04 16:37:51.878 +01:00 [INF] Request starting HTTP/2 GET https://localhost:57679/Users/e3600644-0624-4a2a-e2e5-08dd5b0cf72c - null null
+2025-03-04 16:37:51.921 +01:00 [INF] Executing endpoint 'HTTP: GET /Users/{UserId:Guid}'
+2025-03-04 16:38:06.216 +01:00 [INF] Handling GetUserQuery
+2025-03-04 16:38:06.218 +01:00 [INF] Property UserId : "e3600644-0624-4a2a-e2e5-08dd5b0cf72c"
+2025-03-04 16:38:08.356 +01:00 [INF] Executed DbCommand (53ms) [Parameters=[@__p_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[FullName], [u].[ProfilePhotoUrl]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__p_0
+2025-03-04 16:38:08.425 +01:00 [INF] Handled GetUserQuery with Ardalis.Result.Result`1[ActivityTracker.UseCases.Contributors.UserDTO] in 2206 ms
+2025-03-04 16:38:21.024 +01:00 [INF] Executed endpoint 'HTTP: GET /Users/{UserId:Guid}'
+2025-03-04 16:38:21.033 +01:00 [INF] Request finished HTTP/2 GET https://localhost:57679/Users/e3600644-0624-4a2a-e2e5-08dd5b0cf72c - 200 null application/json; charset=utf-8 29160.2799ms
